@@ -25,5 +25,5 @@ ax.tick_params (axis='both', labelsize=14) # назначение размера
 
 ax.axis([0, 1100, 0, 1100000]) # назначение диапазона для каждой оси
 
-plt.savefig('MPL_diagramm.jpg', bbox_inches='tight')
+plt.savefig('MPL_diagramm.jpg', bbox_inches='tight') # сохранение и обрезание диаграммы
 plt.show() # открывает окно просмотра
