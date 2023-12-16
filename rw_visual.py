@@ -9,7 +9,8 @@ while True:
     # Нанеение точек на диаграму
     plt.style.use("ggplot")
     fig, ax = plt.subplots()
-    ax.scatter(rw.x_values, rw.y_values, s=5)
+    point_numbers = range(rw.num_points)
+    ax.scatter(rw.x_values, rw.y_values, s=10, c=point_numbers, cmap=plt.cm.Blues, edgecolors='none')
     plt.savefig('MPL_points.jpg', bbox_inches='tight')
     plt.show()
     keep_running = input("Make anower walk? (y/n)")
