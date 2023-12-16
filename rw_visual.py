@@ -3,14 +3,14 @@ from random_walk import RandomWalk
 
 # построение случайного блуждания
 while True:
-    rw = RandomWalk()
+    rw = RandomWalk(50_000)
     rw.fill_walk()
 
     # нанеение точек на диаграму
     plt.style.use("ggplot")
     fig, ax = plt.subplots()
     point_numbers = range(rw.num_points)
-    ax.scatter(rw.x_values, rw.y_values, s=10, c=point_numbers, cmap=plt.cm.Blues, edgecolors='none')
+    ax.scatter(rw.x_values, rw.y_values, s=1, c=point_numbers, cmap=plt.cm.Blues, edgecolors='none')
     plt.savefig('MPL_points.jpg', bbox_inches='tight')
 
     # выделение первой и последней точки
