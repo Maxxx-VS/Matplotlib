@@ -8,7 +8,7 @@ while True:
 
     # нанеение точек на диаграму
     plt.style.use("ggplot")
-    fig, ax = plt.subplots()
+    fig, ax = plt.subplots(figsize=(15, 9), dpi=128)
     point_numbers = range(rw.num_points)
     ax.scatter(rw.x_values, rw.y_values, s=1, c=point_numbers, cmap=plt.cm.Blues, edgecolors='none')
     plt.savefig('MPL_points.jpg', bbox_inches='tight')
